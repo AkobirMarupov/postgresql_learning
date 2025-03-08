@@ -70,10 +70,10 @@ Xuddi shuday qilib malumotlar kiritamiz:
 AGar yana malumot kritmoqchi bo`lsangiz xuddi shunday qilib kiritasiz:
 MISOL:
 
----
+```
 INSERT INTO users(name,email,birthday)
 VALUES ('Samandar', 'smandar@gmail.com, '2007-09-08);
----
+```
 
 Xuddi shunday qilib 2- ma;lumotni kiritamiz:
 
