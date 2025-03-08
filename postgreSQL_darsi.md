@@ -95,13 +95,76 @@ users deganimni boisi tepada users degan TABLE yaratganim uchun misol sifatida k
 Kiritgan malumotlarimizni FROM qilib olib ko`rishimiz mumkin
 
 
+# 2- dars.
+
+Bu darsimizda 
+```commandline
+CREATE TABLE table_name();
+```
+
+qilib qo`lda kiritmasdan tayyor TABLE ni pastdagi yatdan tug'irlab olasak ham bo'ladi:
+
+### Sayt ssilkasi => https://mockaroo.com/
+
+Bu saytda TABLE ni tayyor holda olamiz va kodini PyCharm yoki VisualStudio da tug'irlab olamiz.
+Quidagi telegram kanalda table yaratish deb qidirsangiz saytdan qanday qilib foydalanish haqida vedio darslik chiqadi.
+
+### TELEGRAM KANAL: => https://t.me/sql_dars
+
+```commandline
+table yaratish
+```
+TABLE yaratgandan so'ng uni kuchirib olasz yani yuklab olasiz keyin u << download >>  bo'limiga tushadi
+uni C: disk , D: disk yoki Desktop ga olib utsangiz ham bo'ladi va unga boradiga yulni quidagicha ko`rsatib SQL Shell ga kiritasz
+
+MISOL:
+
+```commandline
+\i D:/users.sql
+```
+
+<< \i >> degani buyerda faylni ko'chirib kelishni bildiradigan funksiya.
+
+##Biz tayyor TABLE kodini quidagicha uzgartirib tayyor holga keltiramiz:
+
+MISOL:
+
+```commandline
+CREATE TABLE users (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	email VARCHAR(50),
+	birthday DATE NOT NULL,
+	country VARCHAR(50) NOT NULL);
+
+insert into users (first_name, last_name, email, birthday, country)
+values ('Audra', 'Kleinhaus', 'akleinhaus0@sciencedaily.com', '2024/11/29', 'France');
+insert into users (first_name, last_name, email, birthday, country)
+values ('Haley', 'Owbridge', null, '2024/06/29', 'Portugal');
+insert into users (first_name, last_name, email, birthday, country)
+values ('Dodi', 'Spatig', 'dspatig2@wikipedia.org', '2024/06/03', 'Russia');
+insert into users (first_name, last_name, email, birthday, country)
+values ('Wynne', 'Parmby', null, '2024/10/21', 'China');
+insert into users (first_name, last_name, email, birthday, country)
+values ('Katharine', 'Wyld', null, '2024/11/20', 'Greece');
+```
+
+Bu kodda << email >> ga NOT NULL qo'ymaganligimiz sababi shundaki, bir nechta name lar uchun
+emailllar qoyilmasdan yani emailsiz jadval yaratiladi.
+
+Hamma qismini tayyor qilib bo`lgan quidagicha kod kiritib yaratilgan TABLE ni ishga tushiramiz:
+
+```commandline
+SELECT * FROM table_nomi;
+```
 
 
+MISOL:
 
-
-
-
-
+```commandline
+SELECT * FROM users;
+```
 
 
 
