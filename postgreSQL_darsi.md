@@ -220,11 +220,50 @@ SELECT * FROM users ORDER BY first_name, email DESC;
 ❌ Bu xato misol ❌
 
 
+# 3- Dars
+
+Biz endi Yaratgan TABLE (Jadval) mizdan nechta davlat ishtirok etgan degan funksiyani ham ishlatsak bo`ladi.
+Bu funsiya nomi: 
+```commandline
+DISTINCT
+```
+deb ataladi biz uni misol tariqasida ko'rmoqchi bo'lsak quidagi misoldek kiritamiz:
+
+MISOL:
+
+```commandline
+SELECT DISTINCT country FROM users;
+```
  
+Bu misolda nechta davlat qatnashgan ya'ni o'zimizning O'zbekistonni misol qilib olib Viloyatlardan odamlar Jadvalini yozsak
+biz DISTINCT qilib olib qaysi viloyatlardan odamlar borligini aniqlaymiz:
 
+Endi bizda birorta yaratgan TABLE (Jadval)imizda << WHERE >> funksiyasidan foydalanib biror ustunning qaysi biri malumoti 
+nechta qatnashgani va ufaqat usha malumotdagi Jadvaldagi malumotlarni chiqarib beruvchi funksiyani ishlatamiz:
+Misol qilib aytganda AYOL va ERKAK lar bo`ladi bizga faqat erkaklar kerak shunday qilib << WHERE >> funksiyasidan foydalanib 
+ishlatsak bo'ladi va yana davlatlar << country >> Masalan << Russia >> kerak bo'sa ham shu funksiyadan foydalanamiz;
 
+MISOL:
 
+```commandline
+SELECT * FROM users WHERE country='Russia';
+```
+ Xuddi misoldagidek qilib kiritamiz men hozir Davlatlar uchun kiritdim sizda AYOL va ERKAK lar degan ustun bo`lsa 
+ustun nomini yozasz orqasidan tenglik belgisini yozasz keyin esa bir tirnoqlarichida qaysi malumotdagi lar ro'yxati kerak bo'lsa ushani kiritasz
 
+Endu biz << AND, OR >> degan funksiyalari ham bor bular bilan birga qaysi elementlar yani qaysi malumotlar kerakligini yozib kiritsangiz bo'ladi.
+
+MISOL:
+
+```commandline
+SELECT * FROM usres WHERE country='Russia'AND jinsi='ERKAK' OR country='France';
+```
+
+Bizning tepadagi << users >> TABLE(Jadval)imizda << jinsi >> degan ustun yuq lekin misol tariqasida kiritib yozib ketdim
+Bu misolda Russia va France dagi ERKAK lar ni chiqarib berishi haqidagi funksiyani ishlatdik
+<< AND >> bu va deganini bildiradi, bu funksiya orqali bir nechta ustunlarni chiqarish mumkin:
+<< OR >> bu yoki degani, bu funksiya orqali bir misolda ko'rinib turibdiki davlatlarning ichidagi Russia va France ning
+erkaklarini chiqar deyabmiz OR yani YOKI degan funksiya bitta ustundagi U yoki BU malumotini bizga chiqarishini bildioradi
 
 
 
