@@ -165,8 +165,35 @@ MISOL:
 ```commandline
 SELECT * FROM users;
 ```
+Endi agar bizga birorta ustun kerak bo`lsa masalan: name > ustunini hammasi kerak va boshqa malumotlar chiqmasin degan malumot olish uchu
+biz <<  *  >>   yulduzcha o`rnida ustun nomini yizamiz:
+
+MISOL:
+
+```commandline
+SELECT name FROM users;
+```
+
+Ya'ni buyerda name degan ismlar ustunini chiqarib ber deyabmiz users bu yaratgan TABLE nomi yani yaratgan JADVAL nomi:
+Bizga bir nechta ustunlar kerak bo'lsa agar ustunlar nomini vergul bilan yozib kiritib qo'yamiz:
+
+MISOL:
+
+```commandline
+SELECT name,email,birthday FROM users;
+```
+
+Xuddi shunday qilib:...!
 
 
+
+
+
+
+
+
+
+ 
 
 
 
