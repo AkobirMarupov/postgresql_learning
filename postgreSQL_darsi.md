@@ -185,12 +185,39 @@ SELECT name,email,birthday FROM users;
 
 Xuddi shunday qilib:...!
 
+### ORDER BY
+
+Endi biz SELECT qilib olganimizda Alifbo tartibida va Alifboga teskari tartibda chiqarib beruvchi funksiyasi ham bor 
+<<< ORDER BY >>>  Bu biz uchun eng kerakli funksiya Alifbo tartibida jadvallar yaratish uchun qo'llaniladi:
+<<<  ASC  >>>  = Bu o'zi ko'rinishidan aytib turibdiki A harfidan boshlab yani Alifbo tartibida chiqarib beruvchi funksiya: 1 2 3 4 5
+<<<  DESC  >>>  = Bu esa Alifbo tartibiga teskari yari teskari qilib chiqarib beradi => 5 4 3 2 1
+
+MISOL:
+
+```commandline
+SELECT * FROM users ORDER BY first_name ASC;
+```
+
+Bu misolda Ismlarni Alifbo tartibida yozib beradi:
 
 
+```commandline
+SELECT * FROM users ORDER BY first_name DESC;
+```
+
+Bu misolda Ismlarni Alifbo tartibiga teskari holda chiqarib beradi :
 
 
+Endi biz ORDER BY qilib Alifbo tartibida chiqarishi uchun 2 ta va undan ko'p ustunlarni kiritaolmaymiz
+faqat 1 ta ustunni kiritib usha ustunni Alifbo tartibida yozishini bajarsak bo`ladi 
 
+## ❌
+ ❌ MISOL: ❌
 
+```commandline
+SELECT * FROM users ORDER BY first_name, email DESC;
+```
+❌ Bu xato misol ❌
 
 
  
